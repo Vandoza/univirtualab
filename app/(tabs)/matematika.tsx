@@ -10,7 +10,7 @@ export default function MatematikaTab() {
         <View>
           <Text style={{ fontSize: 18, fontWeight: "900", color: "#0f172a" }}>Praktikum Matematika</Text>
           <Text style={{ marginTop: 4, color: "#334155" }}>
-            Placeholder praktikum matematika. Modul akan dikembangkan oleh tim.
+            Modul praktikum matematika Univirtualab.
           </Text>
         </View>
         <MathLab />

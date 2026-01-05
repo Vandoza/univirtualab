@@ -1,23 +1,31 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
+
+import { IntegralQuizCard } from "../components/IntegralQuizCard";
+import { IntegralCalculatorCard } from "../components/IntegralCalculatorCard";
+import { mathUI } from "../constants/mathUI";
 
 export default function MathLab() {
   return (
-    <View
-      style={{
-        marginTop: 24,
-        padding: 16,
-        borderRadius: 18,
-        backgroundColor: "#f8fafc",
-        borderWidth: 1,
-        borderColor: "#e2e8f0"
+    <ScrollView
+      contentContainerStyle={{
+        padding: 0,
+        paddingBottom: 32,
+        marginTop: 24
       }}
     >
-      <Text style={{ fontSize: 18, fontWeight: "900", color: "#0f172a" }}>Praktikum Matematika</Text>
-      <Text style={{ marginTop: 8, color: "#475569" }}>
-        Placeholder praktikum matematika. Modul dan interaksi praktikum matematika akan dikembangkan di dalam folder
-        src/matematika.
-      </Text>
-    </View>
+      <View style={mathUI.header}>
+        <Text style={mathUI.headerTitle}>
+          Virtual Lab Matematika
+        </Text>
+        <Text style={mathUI.headerSubtitle}>
+          Eksplorasi konsep integral melalui kuis interaktif dan kalkulator.
+        </Text>
+      </View>
+      
+      <IntegralCalculatorCard />
+
+      <IntegralQuizCard />
+    </ScrollView>
   );
 }
